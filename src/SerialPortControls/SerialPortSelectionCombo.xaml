@@ -1,0 +1,23 @@
+﻿<UserControl x:Name="SerialPortSelectionComboControl" x:Class="SerialPortControls.SerialPortSelectionCombo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="300">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="1" x:Name="Button" Click="Button_Click">
+            <Image Source="refresh.ico" Width="16" Height="16"/>
+        </Button>
+        <ComboBox x:Name="ComboBox" ItemsSource="{Binding Path=PortCollection}" SelectedValue="{Binding Path=SelectedPort, Mode=TwoWay}" DataContext="{Binding ElementName=SerialPortSelectionComboControl}" />
+    </Grid>
+
+</UserControl>
