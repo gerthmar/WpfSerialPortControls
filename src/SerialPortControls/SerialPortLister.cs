@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace SerialPortControls
 {
+    /// <summary>
+    /// Helper class to generate an observable collection containing the 
+    /// SerialPortInfo objects for all available serial ports.
+    /// </summary>
     public class SerialPortLister
     {
         private string[] portNames = new string[0];
@@ -18,7 +22,6 @@ namespace SerialPortControls
         {
             Refresh();
         }
-
 
         public ObservableCollection<SerialPortInfo> PortCollection
         {
@@ -49,7 +52,9 @@ namespace SerialPortControls
         }
 
         /// <summary>
-        /// 
+        /// Reloads the available serial ports from the OS, if a previously
+        /// available serial port disappered, it is removed from the collection,
+        /// if a new serial port is available, it is added to the collection.
         /// </summary>
         public void Refresh()
         {
@@ -66,7 +71,6 @@ namespace SerialPortControls
             {
                 if (!isStringInArray(newPortNames, port.Name))
                 {
-
                     portCollection.Remove(port);
                     if (selectedPort == port)
                     {
@@ -85,7 +89,6 @@ namespace SerialPortControls
             }
 
             // check the selected port
-            // todo: verify if collection is empty 
             if (selectedPort != null)
             {
                 if (!portCollection.Contains(selectedPort))
@@ -137,6 +140,7 @@ namespace SerialPortControls
                 selectedPort = null;
             }
         }
+
         /// <summary>
         /// Searches the local portCollection for a given port name.
         /// </summary>

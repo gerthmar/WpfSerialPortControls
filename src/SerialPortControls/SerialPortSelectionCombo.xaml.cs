@@ -19,12 +19,23 @@ namespace SerialPortControls
 {
 
     /// <summary>
+    /// Combo box control that lets the user choose a serial port out of all 
+    /// currently available serial ports. The combo box also contains a button
+    /// to refresh the available serial ports eg. when a USB to serial converter
+    /// has been attached or removed.
     /// </summary>
     public partial class SerialPortSelectionCombo : UserControl
     {
-
         private SerialPortLister serialPortLister = new SerialPortLister();
 
+        public SerialPortSelectionCombo()
+        {
+            InitializeComponent();
+        }
+
+        /// <summary>
+        /// Observable collection to be bound to the WPF element.
+        /// </summary>
         public ObservableCollection<SerialPortInfo> PortCollection
         {
             get
@@ -34,6 +45,9 @@ namespace SerialPortControls
             set { }
         }
 
+        /// <summary>
+        /// Selected serial port to be bound to the WPF element.
+        /// </summary>
         public SerialPortInfo SelectedPort
         {
             get
@@ -41,11 +55,6 @@ namespace SerialPortControls
                 return serialPortLister.SelectedPort;
             }
             set { serialPortLister.SelectedPort = value; }
-        }
-
-        public SerialPortSelectionCombo()
-        {
-            InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
