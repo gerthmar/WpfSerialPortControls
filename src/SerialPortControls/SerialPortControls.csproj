@@ -47,6 +47,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaudRateSelectionCombo.xaml.cs">
+      <DependentUpon>BaudRateSelectionCombo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SerialPortInfo.cs" />
     <Compile Include="SerialPortLister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +58,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="BaudRateSelectionCombo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SerialPortSelectionCombo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

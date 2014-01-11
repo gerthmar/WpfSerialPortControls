@@ -24,5 +24,15 @@ namespace SerialPortControlsDemo
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            cmbBaudRate.AddBaudRate(int.Parse(txtBaudRate.Text.ToString()));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            cmbBaudRate.RemoveBaudRate(int.Parse(txtBaudRate.Text.ToString()));
+        }
     }
 }
