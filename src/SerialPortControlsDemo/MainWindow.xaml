@@ -6,7 +6,7 @@
     <Grid>
 
         <SerialPortControls:SerialPortSelectionCombo HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top" Width="289"/>
-        <SerialPortControls:BaudRateSelectionCombo x:Name="cmbBaudRate"  HorizontalAlignment="Left" Margin="30,69,0,0" VerticalAlignment="Top" Width="161"/>
+        <SerialPortControls:BaudRateSelectionCombo x:Name="cmbBaudRate"  HorizontalAlignment="Left" Margin="30,69,0,0" VerticalAlignment="Top" Width="161" Enable002400="False" Enable004800="False"/>
         <TextBox x:Name="txtBaudRate" HorizontalAlignment="Left" Height="23" Margin="242,69,0,0" TextWrapping="Wrap" Text="2400" VerticalAlignment="Top" Width="120"/>
         <Button Content="Add BaudRate" HorizontalAlignment="Left" Margin="371,51,0,0" VerticalAlignment="Top" Width="123" Click="Button_Click"/>
         <Button Content="Remove Baud Rate" HorizontalAlignment="Left" Margin="373,81,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.387,-0.045" Click="Button_Click_1"/>
