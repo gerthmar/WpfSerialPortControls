@@ -1,15 +1,16 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:SerialPortControls="clr-namespace:SerialPortControls;assembly=SerialPortControls" x:Class="SerialPortControlsDemo.MainWindow"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        xmlns:SerialPortControls="clr-namespace:SerialPortControls;assembly=SerialPortControls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="SerialPortControlsDemo.MainWindow"
+        Title="MainWindow" Height="350" Width="567">
+    <Grid Margin="0,0,-91,0">
 
-        <SerialPortControls:SerialPortSelectionCombo HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top" Width="289"/>
-        <SerialPortControls:BaudRateSelectionCombo x:Name="cmbBaudRate"  HorizontalAlignment="Left" Margin="30,69,0,0" VerticalAlignment="Top" Width="161" Enable002400="False" Enable004800="False"/>
-        <TextBox x:Name="txtBaudRate" HorizontalAlignment="Left" Height="23" Margin="242,69,0,0" TextWrapping="Wrap" Text="2400" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Add BaudRate" HorizontalAlignment="Left" Margin="371,51,0,0" VerticalAlignment="Top" Width="123" Click="Button_Click"/>
-        <Button Content="Remove Baud Rate" HorizontalAlignment="Left" Margin="373,81,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.387,-0.045" Click="Button_Click_1"/>
+        <SerialPortControls:SerialPortSelectionCombo HorizontalAlignment="Left" Margin="6,64,0,0" VerticalAlignment="Top" Width="289"/>
+        <SerialPortControls:BaudRateSelectionCombo x:Name="cmbBaudRate"  HorizontalAlignment="Left" Margin="15,146,0,0" VerticalAlignment="Top" Width="161" Enable002400="False" Enable004800="False"/>
+        <TextBox x:Name="txtBaudRate" HorizontalAlignment="Left" Height="23" Margin="227,146,0,0" TextWrapping="Wrap" Text="2400" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add BaudRate" HorizontalAlignment="Left" Margin="356,128,0,0" VerticalAlignment="Top" Width="123" Click="Button_Click"/>
+        <Button Content="Remove Baud Rate" HorizontalAlignment="Left" Margin="358,158,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.387,-0.045" Click="Button_Click_1"/>
+        <SerialPortControls:SerialPortControl Margin="5,0,0,0" Height="25" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

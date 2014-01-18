@@ -50,6 +50,9 @@
     <Compile Include="BaudRateSelectionCombo.xaml.cs">
       <DependentUpon>BaudRateSelectionCombo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SerialPortControl.xaml.cs">
+      <DependentUpon>SerialPortControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SerialPortInfo.cs" />
     <Compile Include="SerialPortLister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="BaudRateSelectionCombo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SerialPortControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

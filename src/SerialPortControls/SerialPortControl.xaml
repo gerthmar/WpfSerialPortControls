@@ -1,0 +1,47 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SerialPortControls" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="SerialPortControls.SerialPortControl" 
+             mc:Ignorable="d" Height="25"
+            d:DesignHeight="25" d:DesignWidth="550">
+    <Grid Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <local:SerialPortSelectionCombo Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Height="22"/>
+        <local:BaudRateSelectionCombo Grid.Column="1" x:Name="BaudRateSelectionCombo" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="75" Height="22" Margin="0,2,0,1" />
+        <Label  Grid.Column="2" Content="DataBits:" VerticalAlignment="Center"/>
+        <ComboBox Grid.Column="3" x:Name="DataBitsComboBox" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="40" SelectedIndex="3" >
+            <System:Int32>5</System:Int32>
+            <System:Int32>6</System:Int32>
+            <System:Int32>7</System:Int32>
+            <System:Int32>8</System:Int32>
+        </ComboBox>
+        <Label Grid.Column="4" Content="StopBits:" VerticalAlignment="Center"></Label>
+        <ComboBox Grid.Column="5" x:Name="StopBitsComboBox" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="50" SelectedIndex="0" >
+            <System:String>1</System:String>
+            <System:String>1.5</System:String>
+            <System:String>2</System:String>
+        </ComboBox>
+        <Label Grid.Column="6" Content="Parity:" VerticalAlignment="Center"></Label>
+        <ComboBox Grid.Column="7" x:Name="ParityComboBox"  HorizontalAlignment="Left"  VerticalAlignment="Center" Width="80" SelectedIndex="0"  >
+            <System:String>None</System:String>
+            <System:String>Even</System:String>
+            <System:String>Odd</System:String>
+            <System:String>Mark</System:String>
+            <System:String>Space</System:String>
+        </ComboBox>
+
+
+    </Grid>
+</UserControl>

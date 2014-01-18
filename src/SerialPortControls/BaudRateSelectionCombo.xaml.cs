@@ -19,7 +19,7 @@ namespace SerialPortControls
     /// </summary>
     public partial class BaudRateSelectionCombo : UserControl
     {
-        private ObservableCollection<int> collection = new ObservableCollection<int>();
+        private ObservableCollection<int> collection;
         private int selectedBaudRate;
 
         public ObservableCollection<int> BaudRateCollection
@@ -111,6 +111,11 @@ namespace SerialPortControls
             set { if (value) { AddBaudRate(921600); } else { RemoveBaudRate(921600); } }
         }
 
+        public bool IsBaudRateEnabled(int baudrate)
+        {
+            return collection.Contains(baudrate);
+        }
+
         public int SelectedBaudRate
         {
             get
@@ -144,11 +149,19 @@ namespace SerialPortControls
             }
         }
 
+        public BaudRateSelectionCombo(int[] baudrates)
+        {
+            selectedBaudRate = 9600;
+            collection = new ObservableCollection<int>(baudrates);
+            InitializeComponent();
+        }
+
         public BaudRateSelectionCombo()
         {
             selectedBaudRate = 9600;
             /* add common known baud rates */
 
+            collection = new ObservableCollection<int>();
             collection.Add(2400);
             collection.Add(4800);
             collection.Add(9600);

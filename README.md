@@ -18,3 +18,9 @@ The serial port selection cmobo box lists all available serial ports and lets yo
 The baud rate selection combo box lists standard baud rates for the user to choose the required one. It is also possible to add or remove available selections during runtime.
 
 ![ScreenShot](https://raw.github.com/gerthmar/wpfserialportcontrols/master/images/baudRateSelectionScreenshot.png)
+
+### Serial Port Control
+
+The serial port control lets the user choose all relevant settings to open a serial port, and it includes the refresh button from the serial port selection combo box.
+
+![ScreenShot](https://raw.github.com/gerthmar/wpfserialportcontrols/master/images/serialPortControl.png)
